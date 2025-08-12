@@ -1,0 +1,8 @@
+# Terraform local and state providers
+
+.terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+
