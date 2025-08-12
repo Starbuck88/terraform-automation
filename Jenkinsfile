@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'hashicorp/terraform:latest'
+            image 'my-jenkins-tf'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
         }
     }
 
