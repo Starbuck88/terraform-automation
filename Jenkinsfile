@@ -4,11 +4,9 @@ pipeline {
         docker {
             image 'hashicorp/terraform:latest'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-        tools {
-            // This tells Jenkins to find the tool named 'Default' of type 'git'
-            // and add it to the PATH.
-            git 'Default'
+    }
+    tools {
+          git 'Default'
         }
     }
 
