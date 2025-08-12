@@ -1,13 +1,13 @@
 pipeline {
-    // The agent now specifies that it needs both Docker and Git
     agent {
         docker {
             image 'hashicorp/terraform:latest'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-    }
-    tools {
-          git 'Default'
         }
+    }
+
+    // The tools block is now at the same level as the agent block
+    tools {
+        git 'Default'
     }
 
     stages {
